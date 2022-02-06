@@ -27,6 +27,7 @@ img {
 
 a {
     color: var(--main-color);
+    word-break: break-all;
 }
 
 a:hover {
@@ -42,12 +43,17 @@ a:hover {
     justify-content: space-between;
 }
 
-.navbar__toggle {
+.navbar__right {
+    align-items: center;
+    display: flex;
+}
+
+.navbar__right__toggle {
     border-radius: 5%;
     border: 1px solid;
     cursor: pointer;
     font-size: 12px;
-    margin-right: 4em;
+    margin: 0 2em 0 4em;
     padding: 0.5em;
 }
 
@@ -57,7 +63,7 @@ a:hover {
     padding: 0 2.5em;
 }
 
-.navbar__title>a {
+.navbar a {
     text-decoration: none;
 }
 
@@ -98,9 +104,11 @@ a:hover {
 }
 
 .content {
-    margin: 1em 3em;
+    align-self: center;
+    margin: 40px 0;
     text-align: justify;
-    text-justify: inter-word;
+    text-justify: inter-character;
+    width: 600px;
 }
 
 .content__title__date {
@@ -128,6 +136,7 @@ a:hover {
     font-weight: 700;
     margin-bottom: 30px;
     justify-content: space-between;
+    text-align: initial;
 }
 
 .content__subtitle {
@@ -135,6 +144,7 @@ a:hover {
     font-weight: 700;
     margin-top: 30px;
     margin-bottom: 10px;
+    text-align: initial;
 }
 
 .content__subtitle2 {
@@ -151,5 +161,24 @@ a:hover {
 }
 
 .content__reference {
+    font-size: 12px;
     text-align: initial;
+}
+
+@media(max-width: 1000px) {
+    .content {
+        width: 500px;
+    }
+}
+
+@media(max-width: 800px) {
+    .content {
+        width: 400px;
+    }
+}
+
+@media(max-width: 600px) {
+    .content {
+        width: 300px;
+    }
 }
