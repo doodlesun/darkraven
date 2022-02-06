@@ -21,3 +21,19 @@ class Navbar extends HTMLElement {
     }
 }
 customElements.define('nav-bar', Navbar);
+
+class Footer extends HTMLElement {
+    constructor() {
+        super();
+    }
+    connectedCallback() {
+        this.innerHTML = '<div class="footer">' +
+                '            <div id="privacy" class="footer__privacy"></div>' +
+                '        </div>'
+        const aPrivacy = document.createElement('a');
+        aPrivacy.href = (this.getAttribute('rel-path') ?? '') + 'privacy.html';
+        aPrivacy.textContent = 'Privacy';
+        document.getElementById('privacy').appendChild(aPrivacy);
+    }
+}
+customElements.define('footer-component', Footer);

@@ -26,4 +26,7 @@ window.onload = (event) => {
         document.documentElement.style.setProperty('--background-color', '#FFFFFF');
         darkModeSwitch.textContent = 'Dark Mode';
     }
+    document.getElementById('scroll-top').addEventListener('click', () => {
+        window.scrollTo(0, 0);
+    })
 }
