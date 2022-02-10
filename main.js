@@ -1,3 +1,11 @@
+let darkModeStorage = localStorage.getItem('dark-mode');
+if (darkModeStorage === 'false') {
+    document.documentElement.style.setProperty('--main-color', '#000000');
+    document.documentElement.style.setProperty('--background-color', '#FFFFFF');
+} else {
+    document.documentElement.style.setProperty('--main-color', '#FFFFFF');
+    document.documentElement.style.setProperty('--background-color', '#000000');
+}
 window.onload = (event) => {
     let darkModeSwitch = document.getElementById('dark-mode-toggle');
     let darkModeStorage = localStorage.getItem('dark-mode');
