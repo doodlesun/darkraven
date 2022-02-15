@@ -34,6 +34,10 @@ img {
     scroll-behavior: smooth;
 }
 
+.numeration__item {
+    margin: 5px 10px;
+}
+
 a {
     color: var(--main-color);
     word-break: break-all;
