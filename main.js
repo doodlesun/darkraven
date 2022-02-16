@@ -1,10 +1,13 @@
 let darkModeStorage = localStorage.getItem('dark-mode');
-if (darkModeStorage === 'false') {
-    document.documentElement.style.setProperty('--main-color', '#000000');
-    document.documentElement.style.setProperty('--background-color', '#FFFFFF');
+let black = getComputedStyle(document.documentElement).getPropertyValue('--black');
+let white = getComputedStyle(document.documentElement).getPropertyValue('--white');
+console.log('black and white ', black, white);
+if (darkModeStorage === 'true') {
+    document.documentElement.style.setProperty('--main-color', black);
+    document.documentElement.style.setProperty('--background-color', white);
 } else {
-    document.documentElement.style.setProperty('--main-color', '#FFFFFF');
-    document.documentElement.style.setProperty('--background-color', '#000000');
+    document.documentElement.style.setProperty('--main-color', white);
+    document.documentElement.style.setProperty('--background-color', black);
 }
 window.onload = (event) => {
     let darkModeSwitch = document.getElementById('dark-mode-toggle');
@@ -16,7 +19,7 @@ window.onload = (event) => {
     }
     darkModeSwitch.addEventListener('click', () => {
         let currentColor = document.documentElement.style.getPropertyValue('--main-color');
-        if (currentColor === '#000000') {
+        if (currentColor === white) {
             setDarkMode();
             localStorage.setItem('dark-mode', true.toString());
         } else {
@@ -25,14 +28,14 @@ window.onload = (event) => {
         }
     })
     function setDarkMode() {
-        document.documentElement.style.setProperty('--main-color', '#FFFFFF');
-        document.documentElement.style.setProperty('--background-color', '#000000');
-        darkModeSwitch.textContent = 'Light Mode';
+        document.documentElement.style.setProperty('--main-color', black);
+        document.documentElement.style.setProperty('--background-color', white);
+        darkModeSwitch.textContent = 'Dark Mode';
     }
     function setLightMode() {
-        document.documentElement.style.setProperty('--main-color', '#000000');
-        document.documentElement.style.setProperty('--background-color', '#FFFFFF');
-        darkModeSwitch.textContent = 'Dark Mode';
+        document.documentElement.style.setProperty('--main-color', white);
+        document.documentElement.style.setProperty('--background-color', black);
+        darkModeSwitch.textContent = 'Light Mode';
     }
     document.getElementById('scroll-top')?.addEventListener('click', () => {
         window.scrollTo(0, 0);

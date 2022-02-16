@@ -9,9 +9,11 @@ body, html {
 }
 
 :root {
-    --background-color: #000000;
-    --accent-color: #2CD4B2;
-    --main-color: #e0e0e0;
+    --background-color: #090909;
+    --accent-color: #1fb298;
+    --main-color: #efefef;
+    --black: #090909;
+    --white: #efefef;
 }
 
 img {
@@ -68,6 +70,10 @@ a:hover {
     font-size: 12px;
     margin: 0 2em 0 4em;
     padding: 0.5em;
+}
+
+.navbar__right__toggle:hover {
+    background-color: var(--accent-color);
 }
 
 .navbar__title {
