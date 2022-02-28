@@ -1,3 +1,4 @@
+'use strict';
 let darkModeStorage = localStorage.getItem('dark-mode');
 let black = getComputedStyle(document.documentElement).getPropertyValue('--black');
 let white = getComputedStyle(document.documentElement).getPropertyValue('--white');
