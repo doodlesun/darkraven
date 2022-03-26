@@ -110,14 +110,21 @@ footer-component {
 }
 
 .main__year {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 20px 0 5px;
+}
+
+.main__month {
+    font-size: 16px;
     font-weight: 600;
-    margin: 20px 0 10px;
+    margin: 10px 0 5px;
 }
 
 .main__post {
     color: var(--main-color);
     margin-bottom: 10px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .main__post:hover {
