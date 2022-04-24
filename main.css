@@ -8,6 +8,10 @@ body, html {
     scroll-behavior: smooth;
 }
 
+ol {
+    padding-inline-start: 0;
+}
+
 :root {
     --background-color: #090909;
     --accent-color: #1fb298;
@@ -140,12 +144,11 @@ footer-component {
 }
 
 .content__title__date {
-    align-self: flex-end;
-    align-items: flex-end;
     display: flex;
     flex-direction: column;
     font-size: 16px;
     font-weight: 400;
+    margin-left: 20px
 }
 
 .content__title__date__last-edit {
@@ -158,7 +161,7 @@ footer-component {
 }
 
 .content__title {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     font-size: 24px;
     font-weight: 700;
@@ -202,6 +205,18 @@ footer-component {
 @media(max-width: 800px) {
     .content {
         width: 400px;
+    }
+    .content__title {
+        font-size: 20px;
+    }
+    .content__title__date {
+        font-size: 14px;
+    }
+    .content__title__date__last-edit {
+        font-size: 8px;
+    }
+    .content__subtitle {
+        font-size: 18px;
     }
 }
 
